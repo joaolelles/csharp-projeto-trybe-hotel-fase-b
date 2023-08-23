@@ -8,6 +8,6 @@ namespace TrybeHotel.Models
     {
         public int CityId { get; set; }
         public string? Name { get; set; }
-        public ICollection<Hotel>? Hotels { get; set; }
+        public IEnumerable<Hotel>? Hotels { get; set; }
     }
 }

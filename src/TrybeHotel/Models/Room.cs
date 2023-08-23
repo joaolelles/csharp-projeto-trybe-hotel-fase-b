@@ -12,4 +12,5 @@ public class Room
     public int HotelId { get; set; }
     [ForeignKey("HotelId")]
     public Hotel? Hotel { get; set; }
+    public IEnumerable<Booking>? Bookings { get; set; }
 }

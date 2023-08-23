@@ -133,96 +133,6 @@
           }
         },
         {
-          "ruleId": "CS1061",
-          "level": "error",
-          "message": "‘User’ não contém uma definição para \"UserType\" e não foi possível encontrar nenhum método de extensão \"UserType\" que aceite um primeiro argumento do tipo ‘User’ (você está se esquecendo de usar uma diretiva ou uma referência de assembly?)",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/joao/Documentos/Trybe/Projetos/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Repository/Seeder.cs",
-                "region": {
-                  "startLine": 10,
-                  "startColumn": 58,
-                  "endLine": 10,
-                  "endColumn": 66
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CS0117",
-          "level": "error",
-          "message": "\"User\" não contém uma definição para \"Name\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/joao/Documentos/Trybe/Projetos/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Repository/Seeder.cs",
-                "region": {
-                  "startLine": 12,
-                  "startColumn": 46,
-                  "endLine": 12,
-                  "endColumn": 50
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CS0117",
-          "level": "error",
-          "message": "\"User\" não contém uma definição para \"Email\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/joao/Documentos/Trybe/Projetos/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Repository/Seeder.cs",
-                "region": {
-                  "startLine": 12,
-                  "startColumn": 62,
-                  "endLine": 12,
-                  "endColumn": 67
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CS0117",
-          "level": "error",
-          "message": "\"User\" não contém uma definição para \"Password\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/joao/Documentos/Trybe/Projetos/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Repository/Seeder.cs",
-                "region": {
-                  "startLine": 12,
-                  "startColumn": 89,
-                  "endLine": 12,
-                  "endColumn": 97
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CS0117",
-          "level": "error",
-          "message": "\"User\" não contém uma definição para \"UserType\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/joao/Documentos/Trybe/Projetos/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/Repository/Seeder.cs",
-                "region": {
-                  "startLine": 12,
-                  "startColumn": 109,
-                  "endLine": 12,
-                  "endColumn": 117
-                }
-              }
-            }
-          ]
-        },
-        {
           "ruleId": "CA1050",
           "level": "note",
           "message": "Declare types in namespaces",
@@ -271,34 +181,6 @@
               "PortedFromFxCop",
               "Telemetry",
               "EnabledRuleInAggressiveMode"
-            ]
-          }
-        },
-        "CS0117": {
-          "id": "CS0117",
-          "defaultLevel": "error",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0117)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry",
-              "NotConfigurable"
-            ]
-          }
-        },
-        "CS1061": {
-          "id": "CS1061",
-          "defaultLevel": "error",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1061)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry",
-              "NotConfigurable"
             ]
           }
         },
