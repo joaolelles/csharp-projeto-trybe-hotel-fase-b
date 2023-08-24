@@ -42,7 +42,20 @@ namespace TrybeHotel.Repository
 
         public UserDto GetUserByEmail(string userEmail)
         {
-            throw new NotImplementedException();
+            UserDto? userByEmail = _context.Users.Where(user => user.Email == userEmail)
+            .Select(user => new UserDto
+            {
+                UserId = user.UserId,
+                Name = user.Name,
+                Email = user.Email,
+                UserType = user.UserType,
+            }).First();
+
+            if (userByEmail == null)
+            {
+                return null!;
+            }
+            return userByEmail;
         }
 
         public IEnumerable<UserDto> GetUsers()
