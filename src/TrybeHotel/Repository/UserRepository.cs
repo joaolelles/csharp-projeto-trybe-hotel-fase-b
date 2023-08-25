@@ -21,7 +21,7 @@ namespace TrybeHotel.Repository
         }
         public UserDto Add(UserDtoInsert user)
         {
-            User newUser = new User()
+            var newUser = new User()
             {
                 Name = user.Name,
                 Email = user.Email,
@@ -49,7 +49,7 @@ namespace TrybeHotel.Repository
                 Name = user.Name,
                 Email = user.Email,
                 UserType = user.UserType,
-            }).First();
+            }).FirstOrDefault();
 
             if (userByEmail == null)
             {
