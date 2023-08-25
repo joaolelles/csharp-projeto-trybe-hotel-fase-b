@@ -17,7 +17,20 @@ namespace TrybeHotel.Repository
 
         public UserDto Login(LoginDto login)
         {
-            throw new NotImplementedException();
+            User? userByLogin = _context.Users.FirstOrDefault(user => user.Email == login.Email
+            && user.Password == login.Password);
+
+            if (userByLogin == null)
+            {
+                return null!;
+            }
+            return new UserDto
+            {
+                UserId = userByLogin!.UserId,
+                Name = userByLogin.Name,
+                Email = userByLogin.Email,
+                UserType = userByLogin.UserType,
+            };
         }
         public UserDto Add(UserDtoInsert user)
         {
