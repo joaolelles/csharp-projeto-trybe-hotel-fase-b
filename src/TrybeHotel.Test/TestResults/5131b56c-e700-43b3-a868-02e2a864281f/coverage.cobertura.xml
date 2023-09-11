@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.1024" branch-rate="0.0909" version="1.9" timestamp="1694461191" lines-covered="96" lines-valid="937" branches-covered="2" branches-valid="22">
+<coverage line-rate="0.1018" branch-rate="0.0833" version="1.9" timestamp="1694461681" lines-covered="96" lines-valid="943" branches-covered="2" branches-valid="24">
   <sources>
     <source>/home/joao/Documentos/Trybe/Projetos/csharp-026-csharp-projeto-trybe-hotel-fase-b/src/TrybeHotel/</source>
   </sources>
   <packages>
-    <package name="TrybeHotel" line-rate="0.1024" branch-rate="0.0909" complexity="130">
+    <package name="TrybeHotel" line-rate="0.1018" branch-rate="0.0833" complexity="132">
       <classes>
         <class name="Program" filename="Program.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
@@ -130,7 +130,7 @@
             <line number="82" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="TrybeHotel.Services.TokenGenerator" filename="Services/TokenGenerator.cs" line-rate="0" branch-rate="0" complexity="5">
+        <class name="TrybeHotel.Services.TokenGenerator" filename="Services/TokenGenerator.cs" line-rate="0" branch-rate="0" complexity="7">
           <methods>
             <method name="Generate" signature="(TrybeHotel.Dto.UserDto)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
@@ -156,21 +156,31 @@
                 <line number="44" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="AddClaims" signature="(TrybeHotel.Dto.UserDto)" line-rate="0" branch-rate="0" complexity="2">
+            <method name="AddClaims" signature="(TrybeHotel.Dto.UserDto)" line-rate="0" branch-rate="0" complexity="4">
               <lines>
                 <line number="48" hits="0" branch="False" />
                 <line number="49" hits="0" branch="False" />
-                <line number="50" hits="0" branch="False" />
-                <line number="51" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="50" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="48" type="jump" coverage="0%" />
+                    <condition number="18" type="jump" coverage="0%" />
                   </conditions>
                 </line>
+                <line number="51" hits="0" branch="False" />
                 <line number="52" hits="0" branch="False" />
                 <line number="53" hits="0" branch="False" />
-                <line number="54" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
                 <line number="56" hits="0" branch="False" />
-                <line number="57" hits="0" branch="False" />
+                <line number="58" hits="0" branch="False" />
+                <line number="59" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="100" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="60" hits="0" branch="False" />
+                <line number="61" hits="0" branch="False" />
+                <line number="62" hits="0" branch="False" />
+                <line number="64" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -209,17 +219,27 @@
             <line number="44" hits="0" branch="False" />
             <line number="48" hits="0" branch="False" />
             <line number="49" hits="0" branch="False" />
-            <line number="50" hits="0" branch="False" />
-            <line number="51" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="50" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="48" type="jump" coverage="0%" />
+                <condition number="18" type="jump" coverage="0%" />
               </conditions>
             </line>
+            <line number="51" hits="0" branch="False" />
             <line number="52" hits="0" branch="False" />
             <line number="53" hits="0" branch="False" />
-            <line number="54" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
             <line number="56" hits="0" branch="False" />
-            <line number="57" hits="0" branch="False" />
+            <line number="58" hits="0" branch="False" />
+            <line number="59" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="100" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="60" hits="0" branch="False" />
+            <line number="61" hits="0" branch="False" />
+            <line number="62" hits="0" branch="False" />
+            <line number="64" hits="0" branch="False" />
+            <line number="65" hits="0" branch="False" />
             <line number="14" hits="0" branch="False" />
             <line number="15" hits="0" branch="False" />
             <line number="16" hits="0" branch="False" />

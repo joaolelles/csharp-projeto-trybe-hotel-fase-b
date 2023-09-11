@@ -15,23 +15,46 @@ namespace TrybeHotel.Repository
         public BookingResponse Add(BookingDtoInsert booking, string email)
         {
             Room? room = GetRoomById(booking.RoomId);
+            var hotel = _context.Hotels.FirstOrDefault(h => h.HotelId == room.HotelId);
+            var city = _context.Cities.FirstOrDefault(c => c.CityId == hotel.CityId);
+            if (room == null || booking.GuestQuant > room.Capacity || hotel == null || city == null)
+            {
+                return null;
+            }
 
-            var newBooking = new Booking
+
+            Booking newBooking = new()
             {
                 CheckIn = booking.CheckIn,
                 CheckOut = booking.CheckOut,
                 GuestQuant = booking.GuestQuant,
                 Room = room,
             };
+
             _context.Bookings.Add(newBooking);
             _context.SaveChanges();
+
             var bookingResponse = new BookingResponse
             {
                 BookingId = newBooking.BookingId,
                 CheckIn = newBooking.CheckIn,
                 CheckOut = newBooking.CheckOut,
                 GuestQuant = newBooking.GuestQuant,
-                Room = room,
+                Room = new RoomDto
+                {
+                    RoomId = room.RoomId,
+                    Name = room.Name,
+                    Capacity = room.Capacity,
+                    Image = room.Image,
+                    Hotel = new HotelDto
+                    {
+                        HotelId = hotel.HotelId,
+                        Name = hotel.Name,
+                        Address = hotel.Address,
+                        CityId = hotel.CityId,
+                        CityName = city.Name,
+                    }
+                }
             };
             return bookingResponse;
         }

@@ -47,6 +47,14 @@ namespace TrybeHotel.Services
         private ClaimsIdentity AddClaims(UserDto user)
         {
             var claims = new ClaimsIdentity();
+            if (user.Email != null)
+            {
+                claims.AddClaim(new Claim(ClaimTypes.Email, user.Email));
+            }
+            else
+            {
+                throw new ApplicationException("O e-mail do usuário é nulo.");
+            }
             claims.AddClaim(new Claim(ClaimTypes.Email, user.Email));
             if (user.UserType == "admin")
             {
