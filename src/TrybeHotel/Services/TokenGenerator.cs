@@ -23,15 +23,26 @@ namespace TrybeHotel.Services
         public string Generate(UserDto user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var tokenDescriptor = new SecurityTokenDescriptor
+            var claims = AddClaims(user);
+
+            if (claims != null)
             {
-                Subject = AddClaims(user),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_tokenOptions.Secret)), SecurityAlgorithms.HmacSha256Signature),
-                Expires = DateTime.Now.AddDays(_tokenOptions.ExpiresDay)
-            };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
+                    Subject = new ClaimsIdentity(claims),
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_tokenOptions.Secret)), SecurityAlgorithms.HmacSha256Signature),
+                    Expires = DateTime.Now.AddDays(_tokenOptions.ExpiresDay)
+                };
+                var token = tokenHandler.CreateToken(tokenDescriptor);
+                return tokenHandler.WriteToken(token);
+
+            }
+            else
+            {
+                throw new ApplicationException("Nenhuma reivindicação válida foi fornecida.");
+            }
         }
+
 
         private ClaimsIdentity AddClaims(UserDto user)
         {
