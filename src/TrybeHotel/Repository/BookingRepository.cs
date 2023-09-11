@@ -15,14 +15,6 @@ namespace TrybeHotel.Repository
         public BookingResponse Add(BookingDtoInsert booking, string email)
         {
             Room? room = GetRoomById(booking.RoomId);
-            if (room == null)
-            {
-                return null!;
-            }
-            if (booking.GuestQuant > room.Capacity)
-            {
-                return null!;
-            }
 
             var newBooking = new Booking
             {

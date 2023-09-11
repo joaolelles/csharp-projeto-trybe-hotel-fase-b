@@ -30,7 +30,7 @@ namespace TrybeHotel.Controllers
                 var response = _repository.Add(bookingInsert, userByEmail);
                 return Created("", response);
             }
-            catch (System.Exception)
+            catch (Exception)
             {
                 return BadRequest(new { message = "Guest quantity over room capacity" });
             }
