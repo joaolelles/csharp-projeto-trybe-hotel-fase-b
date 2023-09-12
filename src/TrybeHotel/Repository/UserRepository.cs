@@ -1,5 +1,6 @@
 using TrybeHotel.Models;
 using TrybeHotel.Dto;
+using System.ComponentModel.DataAnnotations;
 
 namespace TrybeHotel.Repository
 {
@@ -73,7 +74,14 @@ namespace TrybeHotel.Repository
 
         public IEnumerable<UserDto> GetUsers()
         {
-            throw new NotImplementedException();
+            var user = _context.Users.Select(user => new UserDto
+            {
+                UserId = user.UserId,
+                Name = user.Name,
+                Email = user.Email,
+                UserType = user.UserType,
+            });
+            return user;
         }
 
     }
